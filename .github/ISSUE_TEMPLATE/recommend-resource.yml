@@ -55,6 +55,7 @@ body:
         - "Memory & Context Persistence"
         - "Observability & Monitoring"
         - "Linting"
+        - "Reference & Data Resources"
     validations:
       required: true
 

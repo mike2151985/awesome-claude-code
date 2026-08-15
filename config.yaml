@@ -72,3 +72,6 @@ categories:
       - name: "Observability"
   - name: "Linting"
     prefix: lint
+  - name: "Reference & Data Resources"
+    prefix: reference
+    description: "General-purpose reference and data directories useful as context or lookup resources in Claude Code workflows."

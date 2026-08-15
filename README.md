@@ -63,6 +63,7 @@ The current iteration of the list, such as you see it today, was launched with t
   - [Usage & Cost](#usage--cost)
   - [Observability](#observability)
 - [Linting](#linting)
+- [Reference & Data Resources](#reference--data-resources)
 
 ## Start Here
 
@@ -540,3 +541,10 @@ The current iteration of the list, such as you see it today, was launched with t
 
 - [Upkeep](https://github.com/wei18/Upkeep) by [wei18](https://github.com/wei18) - Upkeep — an AI audit crew for your repo. Catches docs/spec/asset drift with evidence; output-only. Claude Code plugin/skill + reusable CI workflow.  
 <img src="https://img.shields.io/github/created-at/wei18/Upkeep?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="created">&nbsp;&nbsp;<img src="https://img.shields.io/github/last-commit/wei18/Upkeep?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="last-commit">&nbsp;&nbsp;<img src="https://img.shields.io/github/license/wei18/Upkeep?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="license">&nbsp;&nbsp;<img src="https://img.shields.io/github/stars/wei18/Upkeep?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="stars">
+
+## Reference & Data Resources
+
+General-purpose reference and data directories useful as context or lookup resources in Claude Code workflows.
+
+- [public-apis](https://github.com/public-apis/public-apis) by [public-apis](https://github.com/public-apis) - A collaborative, categorized list of free public APIs for use in software and web development, covering hundreds of services across domains such as weather, finance, government, and machine learning.  
+<img src="https://img.shields.io/github/created-at/public-apis/public-apis?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="created">&nbsp;&nbsp;<img src="https://img.shields.io/github/last-commit/public-apis/public-apis?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="last-commit">&nbsp;&nbsp;<img src="https://img.shields.io/github/license/public-apis/public-apis?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="license">&nbsp;&nbsp;<img src="https://img.shields.io/github/stars/public-apis/public-apis?style=flat-square&labelColor=2b2b2b&color=6b6b6b" alt="stars">
