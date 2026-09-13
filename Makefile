@@ -8,7 +8,7 @@
 PYTHON := venv/bin/python
 DEPS_STAMP := venv/.deps-stamp
 
-.PHONY: help deps generate readme add-category move-category remove-category add-resource move-resource update-resource submit-resource sync-form install-hooks test ticker ticker-data ticker-svg recently-added clean
+.PHONY: help deps generate readme add-category move-category remove-category add-resource move-resource update-resource submit-resource sync-form install-hooks test ticker ticker-data ticker-svg recently-added clean saver saver-install saver-uninstall saver-stats saver-off saver-on
 
 venv: ## Set up the venv
 	python3 -m venv venv
@@ -117,6 +117,29 @@ ticker: ticker-data ticker-svg ## Refresh ticker data and regenerate the SVG.
 
 recently-added: $(DEPS_STAMP) ## Render the "Recently Added" carousel SVGs (dark+light) from the CSV into assets/.
 	$(PYTHON) ticker/generate_recently_added_svg.py
+
+# Token saver (.claude/hooks/token_saver): Claude Code hooks + the `ctx` CLI that
+# cut token spend on tool output. Stdlib only, so these targets skip the venv.
+SAVER := python3 .claude/hooks/token_saver/install.py
+CTX := python3 .claude/hooks/ctx
+
+saver: ## Show token-saver status (hooks wired? daemon up? savings so far).
+	$(CTX) status
+
+saver-install: ## Install the token saver into ~/.claude so it runs in every project.
+	$(SAVER) --global
+
+saver-uninstall: ## Remove the global token-saver install (this repo keeps its own).
+	$(SAVER) --uninstall
+
+saver-stats: ## Print the savings ledger.
+	$(CTX) stats
+
+saver-off: ## Turn the token saver off (hooks pass everything through).
+	$(CTX) off
+
+saver-on: ## Turn the token saver back on.
+	$(CTX) on
 
 clean: ## Remove Python caches (__pycache__, .pyc, pytest/mypy caches); never descends into __INTERNAL__, venv, or .git.
 	find . \( -path ./venv -o -path ./.git -o -path ./__INTERNAL__ \) -prune -o \( -name '__pycache__' -o -name '*.py[co]' \) -exec rm -rf {} +

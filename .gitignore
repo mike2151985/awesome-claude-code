@@ -139,3 +139,6 @@ sync-from-*
 
 .rqs-tmp/
 .myob/
+
+# Token saver cache/ledger (see .claude/hooks/token_saver/README.md)
+.claude/.token-saver/
