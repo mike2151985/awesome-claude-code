@@ -15,6 +15,10 @@
       "headers": {
         "Authorization": "Bearer ${PERPLEXITY_API_KEY}"
       }
+    },
+    "firecrawl": {
+      "type": "http",
+      "url": "https://mcp.firecrawl.dev/v2/mcp-oauth"
     }
   }
 }
